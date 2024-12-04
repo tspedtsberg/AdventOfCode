@@ -40,11 +40,15 @@ def sortering(list_1, list_2):
     return new_list_1, new_list_2
 
 def find_dif(new_list_1, new_list_2):
-    dif_list =  [a - b for a, b in zip(new_list_1, new_list_2)]
+    dif_list = []
+    for a, b in zip(new_list_1, new_list_2): #løber igennem begge lister samtidige
+        dif_list.append(a-b) # appender outcome af a-b
     return dif_list
 
 def convert_to_pos(dif_list):
-    positive_list = [abs(x) for x in dif_list]
+    positive_list = []
+    for x in dif_list:
+        positive_list.append(abs(x))
     return positive_list
 
 def summering(positive_list):
