@@ -15,6 +15,7 @@ def main():
     tp_list = check1(list_of_list)
     result = check2(tp_list)
     antal = len(result)
+    
     print(antal)
 
     
